@@ -10,9 +10,9 @@ letters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
 symbols = '!#$%&()*+'
 numbers = '0123456789'
 
-password_letters = [random.choice(letters) for x in range(letter_length)]
-password_symbols = [random.choice(symbols) for x in range(symbol_length)]
-password_numbers = [random.choice(numbers) for x in range(number_length)]
+password_letters = [random.choice(letters) for letter in range(letter_length)]
+password_symbols = [random.choice(symbols) for symbol in range(symbol_length)]
+password_numbers = [random.choice(numbers) for number in range(number_length)]
 
 password_list = password_letters + password_symbols + password_numbers
 random.shuffle(password_list)
