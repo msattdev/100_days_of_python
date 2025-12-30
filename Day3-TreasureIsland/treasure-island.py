@@ -27,4 +27,19 @@ print("Your mission is to find the treasure!")
 print("You're at a crossroad. Where do you want to go?")
 choice1 = input("      Type \"Left\" or \"Right\" \n").lower()
 
-if choice1 == "left": 
+if choice1 == "left":
+    print("You've come to a lake. There is an island in the middle of the lake")
+    choice2 = input("Type \"wait\" to wait for a boat. Type \"swim\" to swim across.\n").lower()
+    if choice2 == "wait":
+        print("You arrive at the island unharmed. There is a house with 3 doors.")
+        choice3 = input("One red, one yellow, and one blue. Which color do you choose?\n").lower()
+        if choice3 == "yellow":
+            print("Congrats! You chose the right door and YOU WIN!")
+        elif choice3 == "red":
+            print("You chose the wrong door and fell into a pit of lava. GAME OVER!")
+        else:
+            print("You chose the wrong door and fell into a barrel of acid. GAME OVER!")
+    else:
+        print("You were eaten by a freshwater shark. GAME OVER!")
+else:
+    print("You fell into a hole. Game Over!")
