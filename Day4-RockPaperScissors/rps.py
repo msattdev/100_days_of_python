@@ -1,0 +1,30 @@
+from random import randint
+
+def get_computer_choice():
+    computer_choice = randint(1, 3)
+    if computer_choice == 1:
+        return "rock"
+    elif computer_choice == 2:
+        return "paper"
+    else:
+        return "scissors"
+    
+def get_user_choice():
+    user_choice = input("Choose rock, paper, or scissors: ").lower()
+    while user_choice not in ["rock", "paper", "scissors"]:
+        user_choice = input("Invalid choice. Please choose rock, paper, or scissors: ").lower()
+    return user_choice
+
+if __name__ == "__main__":
+    user_choice = get_user_choice()
+    computer_choice = get_computer_choice()
+    print(f"You chose {user_choice}, computer chose {computer_choice}.")
+
+    if user_choice == computer_choice:
+        print("It's a tie!")
+    elif (user_choice == "rock" and computer_choice == "scissors") or \
+         (user_choice == "paper" and computer_choice == "rock") or \
+         (user_choice == "scissors" and computer_choice == "paper"):
+        print("You win!")
+    else:
+        print("You lose!")
