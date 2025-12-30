@@ -27,4 +27,4 @@ print("Your mission is to find the treasure!")
 print("You're at a crossroad. Where do you want to go?")
 choice1 = input("      Type \"Left\" or \"Right\" \n").lower()
 
-if choice1 == "left":
+if choice1 == "left": 
