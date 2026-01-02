@@ -52,7 +52,11 @@ stages = ['''
 =========''']
 
 # Display a welcome message for the user
-print("Welcome to Hangman!")
+print('''
+=========================
+Welcome to Hangman!
+=========================
+''')
 
 # Radnomly choose a word from a predefined list
 lives = 6
@@ -60,7 +64,6 @@ random_words = ["python", "java", "kotlin", "javascript","banana"]
 chosen_word = random.choice(random_words)
 placeholder = "_" * len(chosen_word)
 print(placeholder)
-print(chosen_word)  # For testing purposes; remove in production
 
 game_over = False
 correct_letters = []
@@ -85,14 +88,15 @@ while not game_over:
 
     if user_guess not in chosen_word:
         lives -= 1
+        print(f"You guessed wrong! You have {lives} lives remaining.")
         if lives == 0:
             game_over = True
-            print("You lose, sucker!")
+            print("********************YOU LOSE SUCKER!******************")
 
     # Check if the user has guessed all letters in the word
     if "_" not in display:
         game_over = True
-        print("You win!")
+        print("********************YOU WIN!********************")
 
     print(stages[lives])
 
