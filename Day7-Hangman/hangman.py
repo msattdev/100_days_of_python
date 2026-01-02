@@ -55,6 +55,7 @@ stages = ['''
 print("Welcome to Hangman!")
 
 # Radnomly choose a word from a predefined list
+lives = 6
 random_words = ["python", "java", "kotlin", "javascript","banana"]
 chosen_word = random.choice(random_words)
 placeholder = "_" * len(chosen_word)
@@ -82,8 +83,16 @@ while not game_over:
 
     print(display)
 
+    if user_guess not in chosen_word:
+        lives -= 1
+        if lives == 0:
+            game_over = True
+            print("You lose, sucker!")
+
     # Check if the user has guessed all letters in the word
     if "_" not in display:
         game_over = True
         print("You win!")
+
+    print(stages[lives])
 
