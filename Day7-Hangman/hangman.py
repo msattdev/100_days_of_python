@@ -60,7 +60,7 @@ Welcome to Hangman!
 
 # Radnomly choose a word from a predefined list
 lives = 6
-random_words = ["python", "java", "kotlin", "javascript","banana"]
+random_words = ["python", "java", "kotlin", "javascript","banana","hangman","programming","developer","challenge","computer"]
 chosen_word = random.choice(random_words)
 placeholder = "_" * len(chosen_word)
 print(placeholder)
