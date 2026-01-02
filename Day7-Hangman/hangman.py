@@ -63,7 +63,7 @@ lives = 6
 random_words = ["python", "java", "kotlin", "javascript","banana","hangman","programming","developer","challenge","computer"]
 chosen_word = random.choice(random_words)
 placeholder = "_" * len(chosen_word)
-print(placeholder)
+print(f"Word to guess: {placeholder}")
 
 game_over = False
 correct_letters = []
@@ -71,6 +71,10 @@ correct_letters = []
 while not game_over:
     # User guesses a letter
     user_guess = input("Guess a letter: ").lower()
+
+    if user_guess in correct_letters:
+        print(f"You've already guessed the letter '{user_guess}'. Try again.")
+        continue
     # Empty string to store the guessed letters
     display = ""
     # Check if the user guessed letter is in the randomly chosen word
@@ -84,7 +88,7 @@ while not game_over:
         else:
             display += "_"
 
-    print(display)
+    print(f"Correctly guessed: {display}")
 
     if user_guess not in chosen_word:
         lives -= 1
