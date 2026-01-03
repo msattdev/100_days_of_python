@@ -6,3 +6,5 @@ def greet_with(name, location):
 greet_with("Alice", "Wonderland")
 
 greet_with(name="Bob", location="Builderland")
+
+print(22 % 26)
