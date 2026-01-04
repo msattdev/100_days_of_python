@@ -1,4 +1,19 @@
-# Caesar Cipher
+logo = r"""
+##################################################
+#                                                #
+#                 CAESAR CIPHER                  #
+#                                                #
+##################################################
+"""
+
+print(logo)
+print("Welcome to the Caesar Cipher Encoder/Decoder!")
+print("============================================")
+print("You can encode or decode messages using a simple shift cipher.")
+print("============================================")
+print("Note: Only lowercase letters are supported. Non-letter characters will remain unchanged.")
+print("============================================")
+
 alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
 
 direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n").lower()
