@@ -24,3 +24,18 @@ while should_continue:
     result = calculate(first_number, second_number, operation_picked)
     print(f"{first_number} {operation_picked} {second_number} = {result}")
     next_step = input(f"Type 'y' to continue calculating with {result}, or type 'n' to start a new calculation: ").lower()
+    if next_step == 'y':
+        first_number = result
+        operation_picked = input("Pick an operation: ")
+        second_number = float(input("What is the next number?: "))
+    elif next_step == 'n':
+        should_continue = False
+        print("Starting a new calculation...")
+        first_number = float(input("What is the first number?: "))
+        print("+\n-\n*\n/")
+        operation_picked = input("Pick an operation: ")
+        second_number = float(input("What is the next number?: "))
+        should_continue = True
+    else:
+        print("Invalid input. Exiting the calculator.")
+        should_continue = False
